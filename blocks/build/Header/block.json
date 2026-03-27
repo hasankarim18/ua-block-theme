@@ -1,0 +1,21 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/header",
+  "title": "Header",
+  "category": "ua-blocks",
+  "icon": "menu",
+  "description": "University Alpha Theme Blocks",
+  "keywords": [
+    "header",
+    "menu",
+    "uabt-menu",
+    "ua"
+  ],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {},
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
