@@ -9,6 +9,22 @@ class UABT_BlockHandler
 
         add_action('init', [$this, 'register_blocks']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_frontend_styles']);
+        add_filter('block_categories_all', [$this, 'get_block_categories']);
+    }
+
+    public function get_block_categories($categories)
+    {
+        return array_merge(
+
+            [
+                [
+                    'slug' => 'ua-blocks',
+                    'title' => "UA Blocks",
+                    'icon' => 'star',
+                ],
+            ],
+            $categories
+        );
     }
 
 

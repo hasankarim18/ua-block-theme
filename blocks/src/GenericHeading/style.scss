@@ -1,0 +1,46 @@
+// ========================================
+// Generic Heading Styles
+// ========================================
+
+// Color + base styles
+.uatb-generic-heading {
+  a {
+    color: #fff !important;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ========================================
+// Font Size System (Scalable)
+// ========================================
+
+$heading-sizes: (
+  small: 16px,
+  medium: 32px,
+  large: 40px,
+  extra-large: 48px,
+  x-extra-large: 64px,
+);
+
+// Generate classes dynamically
+@each $name, $size in $heading-sizes {
+  .uatb-generic-heading-#{$name} {
+    font-size: $size;
+  }
+}
+
+// ========================================
+// Optional: Responsive Improvements
+// ========================================
+
+@media (max-width: 768px) {
+  @each $name, $size in $heading-sizes {
+    .uatb-generic-heading-#{$name} {
+      font-size: calc(#{$size} * 0.8);
+    }
+  }
+}

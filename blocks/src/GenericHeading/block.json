@@ -1,0 +1,38 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/generic-heading",
+  "title": "GenericHeading",
+  "category": "ua-blocks",
+  "icon": "text",
+  "description": "University Alpha Theme Blocks",
+  "keywords": ["heading", "generic heading", "uabt-menu", "ua", "ua heading"],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Heading text..."
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "color": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "fontSize": {
+      "type": "string",
+      "default": "16px"
+    },
+    "fontWeight": {
+      "type": "string",
+      "default": "700"
+    }
+  },
+
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
