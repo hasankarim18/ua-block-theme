@@ -1,0 +1,1 @@
+{"version":3,"file":"Header/style-index.css","mappings":";;;AAAA;EACE;AACF,C","sources":["webpack://ua-block-theme/./blocks/src/Header/style.scss"],"sourcesContent":[".header_placehoder {\r\n  background-color: lightgray;\r\n}\r\n"],"names":[],"sourceRoot":""}

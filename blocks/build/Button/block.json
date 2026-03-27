@@ -1,0 +1,70 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/custom-button",
+  "title": "Button (Custom)",
+  "category": "ua-blocks",
+  "icon": "button",
+  "description": "University Alpha Theme Button Block",
+  "keywords": [
+    "button",
+    "custom button",
+    "uabt-button",
+    "ua",
+    "ua button"
+  ],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Click me"
+    },
+    "linkObject": {
+      "type": "object",
+      "default": {
+        "url": "/"
+      }
+    },
+    "target": {
+      "type": "string",
+      "default": "_self"
+    },
+    "size": {
+      "type": "string",
+      "default": "medium"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "var(--wp--preset--color--primary)"
+    },
+    "paddingLeft": {
+      "type": "string",
+      "default": "20px"
+    },
+    "paddingRight": {
+      "type": "string",
+      "default": "20px"
+    },
+    "paddingTop": {
+      "type": "string",
+      "default": "10px"
+    },
+    "paddingBottom": {
+      "type": "string",
+      "default": "10px"
+    },
+    "borderRadius": {
+      "type": "string",
+      "default": "5px"
+    }
+  },
+  "supports": {},
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

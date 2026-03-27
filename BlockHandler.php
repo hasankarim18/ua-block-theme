@@ -42,6 +42,7 @@ class UABT_BlockHandler
 
     public function enqueue_frontend_styles()
     {
+
         $manifest_data = require get_template_directory() . '/blocks/build/blocks-manifest.php';
         foreach (array_keys($manifest_data) as $block_type) {
             wp_enqueue_style(

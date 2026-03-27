@@ -17,6 +17,87 @@ return array(
 		'version' => '1.0.0',
 		'textdomain' => 'uadomain',
 		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full',
+				'wide'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'Button' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/custom-button',
+		'title' => 'Button (Custom)',
+		'category' => 'ua-blocks',
+		'icon' => 'button',
+		'description' => 'University Alpha Theme Button Block',
+		'keywords' => array(
+			'button',
+			'custom button',
+			'uabt-button',
+			'ua',
+			'ua button'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'text' => array(
+				'type' => 'string',
+				'default' => 'Click me'
+			),
+			'linkObject' => array(
+				'type' => 'object',
+				'default' => array(
+					'url' => '/'
+				)
+			),
+			'target' => array(
+				'type' => 'string',
+				'default' => '_self'
+			),
+			'size' => array(
+				'type' => 'string',
+				'default' => 'medium'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#fff'
+			),
+			'backgroundColor' => array(
+				'type' => 'string',
+				'default' => 'var(--wp--preset--color--primary)'
+			),
+			'paddingLeft' => array(
+				'type' => 'string',
+				'default' => '20px'
+			),
+			'paddingRight' => array(
+				'type' => 'string',
+				'default' => '20px'
+			),
+			'paddingTop' => array(
+				'type' => 'string',
+				'default' => '10px'
+			),
+			'paddingBottom' => array(
+				'type' => 'string',
+				'default' => '10px'
+			),
+			'borderRadius' => array(
+				'type' => 'string',
+				'default' => '5px'
+			)
+		),
+		'supports' => array(
 			
 		),
 		'editorScript' => 'file:./index.js',

@@ -8,7 +8,9 @@ export default function Edit() {
   return (
     <>
       <div {...blockProps}>
-        <h1>Header</h1>
+        <div className="header_placehoder">
+          <h1>University header placeholder</h1>
+        </div>
       </div>
     </>
   );

@@ -18,6 +18,12 @@ export default function Edit({ attributes, setAttributes }) {
   const blockProps = useBlockProps();
   const { textAlign, text, color, fontSize, fontWeight } = attributes;
 
+  const ourColors = [
+    { name: "blue", color: "#0deb66" },
+    { name: "orange", color: "#ee964b" },
+    { name: "dark-orange", color: "#f95738" },
+  ];
+
   return (
     <>
       <BlockControls>
@@ -86,6 +92,7 @@ export default function Edit({ attributes, setAttributes }) {
         <PanelBody>
           <p>Text Color</p>
           <ColorPalette
+            colors={ourColors}
             value={color}
             onChange={(newColor) => {
               setAttributes({

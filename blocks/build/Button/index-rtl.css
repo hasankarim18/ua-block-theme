@@ -1,0 +1,26 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/src/Button/edit.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ua-btn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+/*
+   { name: "blue", color: "#0deb66" },
+    { name: "orange", color: "#ee964b" },
+    { name: "dark-orange", color: "#f95738" },
+*/
+
+.uatb-btn--blue {
+  background-color: #0deb66;
+}
+
+.uatb-btn--orange {
+  background-color: #ee964b;
+}
+
+.uatb-btn--dark_orange {
+  background-color: #f95738;
+}

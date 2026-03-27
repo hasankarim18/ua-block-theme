@@ -1,0 +1,23 @@
+.ua-btn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+/*
+   { name: "blue", color: "#0deb66" },
+    { name: "orange", color: "#ee964b" },
+    { name: "dark-orange", color: "#f95738" },
+*/
+
+.uatb-btn--blue {
+  background-color: #0deb66;
+}
+
+.uatb-btn--orange {
+  background-color: #ee964b;
+}
+
+.uatb-btn--dark_orange {
+  background-color: #f95738;
+}

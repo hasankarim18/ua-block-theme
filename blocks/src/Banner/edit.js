@@ -1,11 +1,39 @@
-import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
+import {
+  BlockControls,
+  InnerBlocks,
+  useBlockProps,
+} from "@wordpress/block-editor";
 import "./edit.scss";
 
-export default function Edit() {
-  const blockProps = useBlockProps();
+import { ToolbarButton, ToolbarGroup } from "@wordpress/components";
+
+export default function Edit({ attributes, setAttributes }) {
+  const { align } = attributes;
+  const blockProps = useBlockProps({
+    className: align ? `align${align}` : "",
+  });
 
   return (
     <>
+      <BlockControls>
+        <BlockControls>
+          <ToolbarGroup>
+            <ToolbarButton
+              icon="align-wide"
+              label="Wide"
+              isPressed={align === "wide"}
+              onClick={() => setAttributes({ align: "wide" })}
+            />
+
+            <ToolbarButton
+              icon="align-full-width"
+              label="Full"
+              isPressed={align === "full"}
+              onClick={() => setAttributes({ align: "full" })}
+            />
+          </ToolbarGroup>
+        </BlockControls>
+      </BlockControls>
       <div {...blockProps}>
         <div class="page-banner">
           <div
@@ -17,7 +45,11 @@ export default function Edit() {
           ></div>
           <div className="page-banner__content container t-center c-white">
             <InnerBlocks
-              allowedBlocks={["core/heading", "ua-blocks/generic-heading"]}
+              allowedBlocks={[
+                "core/heading",
+                "ua-blocks/generic-heading",
+                "ua-blocks/custom-button",
+              ]}
             />
           </div>
         </div>

@@ -1,0 +1,1 @@
+{"version":3,"file":"Button/style-index.css","mappings":";;;AAAA;EACE;EACA;EACA;AACF,C","sources":["webpack://ua-block-theme/./blocks/src/Button/style.scss"],"sourcesContent":[".ua-btn {\r\n  display: inline-block;\r\n  text-decoration: none;\r\n  cursor: pointer !important;\r\n}\r\n"],"names":[],"sourceRoot":""}

@@ -13,7 +13,18 @@
   ],
   "version": "1.0.0",
   "textdomain": "uadomain",
-  "attributes": {},
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "full",
+      "wide"
+    ]
+  },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
