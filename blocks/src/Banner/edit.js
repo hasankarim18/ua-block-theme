@@ -1,17 +1,52 @@
+import apiFetch from "@wordpress/api-fetch";
 import {
   BlockControls,
   InnerBlocks,
+  InspectorControls,
+  MediaUpload,
+  MediaUploadCheck,
   useBlockProps,
 } from "@wordpress/block-editor";
+import { useEffect } from "@wordpress/element";
 import "./edit.scss";
 
-import { ToolbarButton, ToolbarGroup } from "@wordpress/components";
+import {
+  Button,
+  PanelBody,
+  PanelRow,
+  ToolbarButton,
+  ToolbarGroup,
+} from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
-  const { align } = attributes;
+  const { align, backgroundImageUrl, imageId } = attributes;
   const blockProps = useBlockProps({
     className: align ? `align${align}` : "",
   });
+
+  useEffect(
+    function () {
+      async function fetchImage() {
+        const response = await apiFetch({
+          path: `/wp/v2/media/${imageId}`,
+          method: "GET",
+        });
+        setAttributes({
+          backgroundImageUrl:
+            response.media_details.sizes.pageBanner.source_url,
+        });
+      }
+      if (imageId) {
+        fetchImage();
+      }
+      // console.log(backgroundImageUrl);
+    },
+    [imageId],
+  );
+
+  function onFileSelect(file) {
+    setAttributes({ imageId: file.id });
+  }
 
   return (
     <>
@@ -33,14 +68,32 @@ export default function Edit({ attributes, setAttributes }) {
             />
           </ToolbarGroup>
         </BlockControls>
+        <InspectorControls>
+          <PanelBody title="Background Image" initialOpen={true}>
+            <PanelRow>
+              <MediaUploadCheck>
+                <MediaUpload
+                  onSelect={onFileSelect}
+                  value={imageId}
+                  render={({ open }) => {
+                    return (
+                      <Button onClick={open}>
+                        {imageId ? "Change Image" : "Choose Image"}
+                      </Button>
+                    );
+                  }}
+                />
+              </MediaUploadCheck>
+            </PanelRow>
+          </PanelBody>
+        </InspectorControls>
       </BlockControls>
       <div {...blockProps}>
         <div class="page-banner">
           <div
             className="page-banner__bg-image"
             style={{
-              backgroundImage:
-                "url('/wp-content/themes/ua-block-theme/images/library-hero.jpg')",
+              backgroundImage: `url("${backgroundImageUrl}")`,
             }}
           ></div>
           <div className="page-banner__content container t-center c-white">

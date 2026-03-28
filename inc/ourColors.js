@@ -1,5 +1,5 @@
 const ourColors = [
-  { name: "blue", color: "#0deb66" },
+  { name: "blue", color: "#0d3b66" },
   { name: "orange", color: "#ee964b" },
   { name: "dark_orange", color: "#f95738" },
 ];

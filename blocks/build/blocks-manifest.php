@@ -20,6 +20,14 @@ return array(
 			'align' => array(
 				'type' => 'string',
 				'default' => 'full'
+			),
+			'imageId' => array(
+				'type' => 'number',
+				'default' => ''
+			),
+			'backgroundImageUrl' => array(
+				'type' => 'string',
+				'default' => '/wp-content/themes/ua-block-theme/images/library-hero.jpg'
 			)
 		),
 		'supports' => array(

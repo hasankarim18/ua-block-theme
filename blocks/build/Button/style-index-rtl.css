@@ -1,8 +1,49 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/src/Button/style.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
-.ua-btn {
-  display: inline-block;
+.uabt-btn {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer !important;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.uabt-btn:hover {
+  text-decoration: underline;
+}
+
+/*
+   { name: "blue", color: "#0deb66" },
+    { name: "orange", color: "#ee964b" },
+    { name: "dark-orange", color: "#f95738" },
+*/
+
+.btn-small {
+  padding: 20px 50px;
+  font-size: 16px;
+}
+
+.btn-medium {
+  padding: 30px 100px;
+  font-size: 30px;
+}
+
+.btn-large {
+  padding: 50px 150px;
+  font-size: 40px;
+}
+
+.uatb-btn--blue {
+  background-color: #0d3b66;
+}
+
+.uatb-btn--orange {
+  background-color: #ee964b;
+}
+
+.uatb-btn--dark_orange {
+  background-color: #f95738;
 }

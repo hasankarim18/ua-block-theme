@@ -95,18 +95,55 @@ export default function Edit({ attributes, setAttributes }) {
                 }}
               />
             </PanelBody>
+            <PanelBody title="Button Size" initialOpen={true}>
+              <ToolbarGroup>
+                <ToolbarButton
+                  isPressed={size === "small"}
+                  onClick={() => {
+                    setAttributes({
+                      size: "small",
+                    });
+                  }}
+                >
+                  Small
+                </ToolbarButton>
+                <ToolbarButton
+                  isPressed={size === "medium"}
+                  onClick={() => {
+                    setAttributes({
+                      size: "medium",
+                    });
+                  }}
+                >
+                  Medium
+                </ToolbarButton>
+                <ToolbarButton
+                  isPressed={size === "large"}
+                  onClick={() => {
+                    setAttributes({
+                      size: "large",
+                    });
+                  }}
+                >
+                  Large
+                </ToolbarButton>
+              </ToolbarGroup>
+            </PanelBody>
           </InspectorControls>
+
           <RichText
             allowedFormats={["core/bold", "core/italic"]}
-            className={`ua-btn btn-${size} uatb-btn--${backgroundColor}`}
+            className={`uabt-btn btn-${size} uatb-btn--${backgroundColor}`}
             placeholder="Button text..."
             tagName="a"
             value={text}
+            onChange={(newValue) => {
+              setAttributes({ text: newValue });
+            }}
             href={linkObject.url}
             target={target}
             style={{
               color: textColor,
-              padding: `${paddingTop} ${paddingRight} ${paddingBottom} ${paddingLeft}`,
               borderRadius: borderRadius,
             }}
           />

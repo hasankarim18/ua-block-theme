@@ -17,6 +17,14 @@
     "align": {
       "type": "string",
       "default": "full"
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "backgroundImageUrl": {
+      "type": "string",
+      "default": "/wp-content/themes/ua-block-theme/images/library-hero.jpg"
     }
   },
   "supports": {
