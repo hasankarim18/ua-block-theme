@@ -1,0 +1,24 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/blog-home",
+  "title": "Blog Home",
+  "category": "ua-blocks",
+  "icon": "blog",
+  "description": "Reading->page->blog and home.html",
+  "keywords": ["blog", "home", "uabt", "ua", "page"],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

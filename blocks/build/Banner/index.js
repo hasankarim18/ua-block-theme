@@ -41,26 +41,35 @@ function Edit({
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
     className: align ? `align${align}` : ""
   });
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
     async function fetchImage() {
       const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
         path: `/wp/v2/media/${imageId}`,
         method: "GET"
       });
       setAttributes({
-        backgroundImageUrl: response.media_details.sizes.pageBanner.source_url
+        backgroundImageUrl: response.media_details.sizes?.pageBanner?.source_url || response.source_url
       });
     }
+
+    // ✅ If user selected image → fetch it
     if (imageId) {
       fetchImage();
+    } else if (!backgroundImageUrl && window.localizeData?.bannerBgFallback) {
+      setAttributes({
+        backgroundImageUrl: window.localizeData.bannerBgFallback
+      });
     }
-    // console.log(backgroundImageUrl);
   }, [imageId]);
   function onFileSelect(file) {
     setAttributes({
       imageId: file.id
     });
   }
+
+  // console.log(universityData ? universityData : "no data");
+  // console.log(window.localizeData.bannerBgFallback);
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
@@ -122,28 +131,6 @@ function Edit({
     })]
   });
 }
-
-/**
- 
-
-const userMelater = (
-    <>
-      
-        <h1 className="headline headline--large"> Welcome! </h1>
-        <h2 className="headline headline--medium">
-          We think you&rsquo;ll like it here.
-        </h2>
-        <h3 className="headline headline--small">
-          Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re
-          interested in?
-        </h3>
-        <a href="#" className="btn btn--large btn--blue">
-          Find Your Majorsss
-        </a>
-     
-    </>
-  );
- */
 
 /***/ },
 
@@ -268,7 +255,7 @@ module.exports = window["wp"]["element"];
   \**************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"ua-blocks/banner","title":"Banner","category":"ua-blocks","icon":"money","description":"University Alpha Theme Blocks","keywords":["banner","ub-banner","uabt-blocks","ua"],"version":"1.0.0","textdomain":"uadomain","attributes":{"align":{"type":"string","default":"full"},"imageId":{"type":"number","default":""},"backgroundImageUrl":{"type":"string","default":"/wp-content/themes/ua-block-theme/images/library-hero.jpg"}},"supports":{"align":["full","wide"]},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"ua-blocks/banner","title":"Banner","category":"ua-blocks","icon":"money","description":"University Alpha Theme Blocks","keywords":["banner","ub-banner","uabt-blocks","ua"],"version":"1.0.0","textdomain":"uadomain","attributes":{"align":{"type":"string","default":"full"},"imageId":{"type":"number","default":""},"backgroundImageUrl":{"type":"string"}},"supports":{"align":["full","wide"]},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }
 

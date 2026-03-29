@@ -8,8 +8,22 @@ class UABT_BlockHandler
     {
 
         add_action('init', [$this, 'register_blocks']);
-        add_action('wp_enqueue_scripts', [$this, 'enqueue_frontend_styles']);
+        add_action('wp_enqueue_scripts', [$this, 'enqueue_frontend_scripts']);
         add_filter('block_categories_all', [$this, 'get_block_categories']);
+        // block assets
+        add_action('enqueue_block_assets', [$this, 'enqueue_block_assets_callback']);
+
+    }
+
+    public function enqueue_block_assets_callback()
+    {
+        wp_enqueue_style(
+            'blockAndFrontStyles',
+            get_theme_file_uri() . '/inc/blockAndFrontStyles.css',
+            [],
+            '1.0.0',
+            'all'
+        );
     }
 
     public function get_block_categories($categories)
@@ -40,7 +54,8 @@ class UABT_BlockHandler
 
     }
 
-    public function enqueue_frontend_styles()
+
+    public function enqueue_frontend_scripts()
     {
 
         $manifest_data = require get_template_directory() . '/blocks/build/blocks-manifest.php';

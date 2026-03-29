@@ -23,8 +23,7 @@
       "default": ""
     },
     "backgroundImageUrl": {
-      "type": "string",
-      "default": "/wp-content/themes/ua-block-theme/images/library-hero.jpg"
+      "type": "string"
     }
   },
   "supports": {

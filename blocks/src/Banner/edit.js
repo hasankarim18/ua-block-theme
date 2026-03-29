@@ -24,29 +24,36 @@ export default function Edit({ attributes, setAttributes }) {
     className: align ? `align${align}` : "",
   });
 
-  useEffect(
-    function () {
-      async function fetchImage() {
-        const response = await apiFetch({
-          path: `/wp/v2/media/${imageId}`,
-          method: "GET",
-        });
-        setAttributes({
-          backgroundImageUrl:
-            response.media_details.sizes.pageBanner.source_url,
-        });
-      }
-      if (imageId) {
-        fetchImage();
-      }
-      // console.log(backgroundImageUrl);
-    },
-    [imageId],
-  );
+  useEffect(() => {
+    async function fetchImage() {
+      const response = await apiFetch({
+        path: `/wp/v2/media/${imageId}`,
+        method: "GET",
+      });
+
+      setAttributes({
+        backgroundImageUrl:
+          response.media_details.sizes?.pageBanner?.source_url ||
+          response.source_url,
+      });
+    }
+
+    // ✅ If user selected image → fetch it
+    if (imageId) {
+      fetchImage();
+    } else if (!backgroundImageUrl && window.localizeData?.bannerBgFallback) {
+      setAttributes({
+        backgroundImageUrl: window.localizeData.bannerBgFallback,
+      });
+    }
+  }, [imageId]);
 
   function onFileSelect(file) {
     setAttributes({ imageId: file.id });
   }
+
+  // console.log(universityData ? universityData : "no data");
+  // console.log(window.localizeData.bannerBgFallback);
 
   return (
     <>
@@ -110,25 +117,3 @@ export default function Edit({ attributes, setAttributes }) {
     </>
   );
 }
-
-/**
- 
-
-const userMelater = (
-    <>
-      
-        <h1 className="headline headline--large"> Welcome! </h1>
-        <h2 className="headline headline--medium">
-          We think you&rsquo;ll like it here.
-        </h2>
-        <h3 className="headline headline--small">
-          Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re
-          interested in?
-        </h3>
-        <a href="#" className="btn btn--large btn--blue">
-          Find Your Majorsss
-        </a>
-     
-    </>
-  );
- */

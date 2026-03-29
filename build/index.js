@@ -10,12 +10,12 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+/* harmony import */ var _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/GoogleMap */ "./src/modules/GoogleMap.js");
 /* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/HeroSlider */ "./src/modules/HeroSlider.js");
-/* harmony import */ var _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/GoogleMap */ "./src/modules/GoogleMap.js");
-/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Search */ "./src/modules/Search.js");
+/* harmony import */ var _modules_Like__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Like */ "./src/modules/Like.js");
+/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
 /* harmony import */ var _modules_MyNotes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/MyNotes */ "./src/modules/MyNotes.js");
-/* harmony import */ var _modules_Like__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/Like */ "./src/modules/Like.js");
+/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/Search */ "./src/modules/Search.js");
 
 
 // Our modules / classes
@@ -27,12 +27,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Instantiate a new object using our modules/classes
-const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_4__["default"]();
 const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const googleMap = new _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_3__["default"]();
-const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_4__["default"]();
+const googleMap = new _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_6__["default"]();
 const myNotes = new _modules_MyNotes__WEBPACK_IMPORTED_MODULE_5__["default"]();
-const like = new _modules_Like__WEBPACK_IMPORTED_MODULE_6__["default"]();
+const like = new _modules_Like__WEBPACK_IMPORTED_MODULE_3__["default"]();
+
+//alert("hello from src/index.js");
 
 /***/ },
 
@@ -132,9 +134,9 @@ __webpack_require__.r(__webpack_exports__);
 
 class HeroSlider {
   constructor() {
-    if (document.querySelector(".hero-slider")) {
-      // count how many slides there are
-      const dotCount = document.querySelectorAll(".hero-slider__slide").length;
+    const allSlideShows = document.querySelectorAll(".hero-slider");
+    allSlideShows.forEach(currentSlideShow => {
+      const dotCount = currentSlideShow.querySelectorAll(".hero-slider__slide").length;
 
       // Generate the HTML for the navigation dots
       let dotHTML = "";
@@ -143,15 +145,18 @@ class HeroSlider {
       }
 
       // Add the dots HTML to the DOM
-      document.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML);
+      currentSlideShow.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML);
 
       // Actually initialize the glide / slider script
-      var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](".hero-slider", {
+      var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](currentSlideShow, {
         type: "carousel",
         perView: 1,
         autoplay: 3000
       });
       glide.mount();
+    });
+    if (document.querySelector(".hero-slider")) {
+      // count how many slides there are
     }
   }
 }

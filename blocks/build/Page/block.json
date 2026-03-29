@@ -1,0 +1,32 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/page",
+  "title": "Single Page Template",
+  "category": "ua-blocks",
+  "icon": "text-page",
+  "description": "University Alpha Theme Blocks",
+  "keywords": [
+    "single",
+    "single-page",
+    "uabt",
+    "ua",
+    "page"
+  ],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "full"
+    ]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

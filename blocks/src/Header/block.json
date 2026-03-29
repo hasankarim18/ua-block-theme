@@ -1,17 +1,24 @@
 {
   "apiVersion": 3,
   "name": "ua-blocks/header",
-  "title": "Header",
+  "title": "Ua Header",
   "category": "ua-blocks",
   "icon": "menu",
-  "description": "University Alpha Theme Blocks",
-  "keywords": ["header", "menu", "uabt-menu", "ua"],
+  "description": "University Alpha Theme Block  for Header",
+  "keywords": ["header", "menu", "uabt", "ua", "events and blogs"],
   "version": "1.0.0",
   "textdomain": "uadomain",
-  "attributes": {},
-
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full", "wide"]
+  },
   "editorScript": "file:./index.js",
-  "editorStyle": "file:./style-index.css",
+  "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
   "render": "file:./render.php"
 }

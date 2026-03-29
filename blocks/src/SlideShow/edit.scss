@@ -1,0 +1,17 @@
+.uabt-align-wide {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uabt-align-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.uabt_slides_placehoder {
+  width: 100%;
+  padding: 30px;
+  background-color: gray;
+  color: aliceblue;
+}

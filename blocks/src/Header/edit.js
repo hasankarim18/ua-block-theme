@@ -1,17 +1,13 @@
-//"$schema": "https://schemas.wp.org/trunk/block.json",
-
 import { useBlockProps } from "@wordpress/block-editor";
+import "./edit.scss";
 
 export default function Edit() {
   const blockProps = useBlockProps();
-
   return (
-    <>
-      <div {...blockProps}>
-        <div className="header_placehoder">
-          <h1>University header placeholder</h1>
-        </div>
+    <div {...blockProps}>
+      <div className="events-and-blogs">
+        <h2>Header placehoder</h2>
       </div>
-    </>
+    </div>
   );
 }

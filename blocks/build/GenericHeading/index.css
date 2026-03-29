@@ -1,1 +1,44 @@
-.uatb-generic-heading a{color:#fff!important;text-decoration:none}.uatb-generic-heading a:hover{text-decoration:underline}.uatb-generic-heading-small{font-size:16px}.uatb-generic-heading-medium{font-size:32px}.uatb-generic-heading-large{font-size:40px}.uatb-generic-heading-extra-large{font-size:48px}.uatb-generic-heading-x-extra-large{font-size:64px}@media(max-width:768px){.uatb-generic-heading-small{font-size:12.8px}.uatb-generic-heading-medium{font-size:25.6px}.uatb-generic-heading-large{font-size:32px}.uatb-generic-heading-extra-large{font-size:38.4px}.uatb-generic-heading-x-extra-large{font-size:51.2px}}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/src/GenericHeading/edit.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.uatb-generic-heading a {
+  color: #fff !important;
+  text-decoration: none;
+}
+.uatb-generic-heading a:hover {
+  text-decoration: underline;
+}
+.uatb-generic-heading-small {
+  font-size: 16px;
+}
+.uatb-generic-heading-medium {
+  font-size: 32px;
+}
+.uatb-generic-heading-large {
+  font-size: 40px;
+}
+.uatb-generic-heading-extra-large {
+  font-size: 48px;
+}
+.uatb-generic-heading-x-extra-large {
+  font-size: 64px;
+}
+@media (max-width: 768px) {
+  .uatb-generic-heading-small {
+    font-size: calc(16px * 0.8);
+  }
+  .uatb-generic-heading-medium {
+    font-size: calc(32px * 0.8);
+  }
+  .uatb-generic-heading-large {
+    font-size: calc(40px * 0.8);
+  }
+  .uatb-generic-heading-extra-large {
+    font-size: calc(48px * 0.8);
+  }
+  .uatb-generic-heading-x-extra-large {
+    font-size: calc(64px * 0.8);
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

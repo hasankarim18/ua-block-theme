@@ -1,8 +1,9 @@
 <?php
-
-if (!isset($attributes['imgURL'])) {
-    $attributes['imgURL'] = get_theme_file_uri('/images/library-hero.jpg');
+//$backgroundImageUrl = $attributes['backgroundImageUrl'];
+if (!isset($attributes['backgroundImageUrl'])) {
+    $attributes['backgroundImageUrl'] = get_theme_file_uri('/images/library-hero.jpg');
 }
+
 
 $align = $attributes['align'];
 
@@ -15,7 +16,8 @@ $align = $attributes['align'];
     )
 ]); ?>>
     <div class="page-banner">
-        <div class="page-banner__bg-image" style="background-image: url('<?php echo $attributes['imgURL'] ?>')"></div>
+        <div class="page-banner__bg-image"
+            style="background-image: url('<?php echo $attributes['backgroundImageUrl']; ?>')"></div>
         <div class="page-banner__content container t-center c-white">
             <?php echo $content; ?>
         </div>

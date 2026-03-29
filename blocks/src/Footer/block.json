@@ -1,0 +1,24 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/footer",
+  "title": "Ua Footer",
+  "category": "ua-blocks",
+  "icon": "table-row-before",
+  "description": "University Alpha Theme Block  for Header",
+  "keywords": ["footer", "menu", "uabt", "ua", "events and blogs"],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full", "wide"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

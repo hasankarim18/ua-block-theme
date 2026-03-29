@@ -1,0 +1,25 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/slide-item",
+  "title": "Slide Item",
+  "category": "ua-blocks",
+  "parent": ["ua-blocks/slide-show"],
+  "icon": "welcome-add-page",
+  "description": "University Alpha Theme Blocks",
+  "keywords": ["banner", "ub-banner", "uabt-blocks", "ua"],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "themeimage": { "type": "string" },
+    "align": { "type": "string", "default": "full" },
+    "imgID": { "type": "number" },
+    "imgURL": { "type": "string" }
+  },
+  "supports": {
+    "align": ["full"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,22 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/src/SlideShow/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.uabt-align-wide {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uabt-align-full {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.uabt_slides_placehoder {
+  width: 100%;
+  padding: 30px;
+  background-color: gray;
+  color: aliceblue;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

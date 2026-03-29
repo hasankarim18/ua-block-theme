@@ -26,8 +26,7 @@ return array(
 				'default' => ''
 			),
 			'backgroundImageUrl' => array(
-				'type' => 'string',
-				'default' => '/wp-content/themes/ua-block-theme/images/library-hero.jpg'
+				'type' => 'string'
 			)
 		),
 		'supports' => array(
@@ -113,6 +112,72 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'EventsAndBlogs' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/events-and-blogs',
+		'title' => 'Events and Blogs',
+		'category' => 'ua-blocks',
+		'icon' => 'text',
+		'description' => 'University Alpha Theme Blocks',
+		'keywords' => array(
+			'events',
+			'blogs',
+			'uabt',
+			'ua',
+			'events and blogs'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full',
+				'wide'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'Footer' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/footer',
+		'title' => 'Ua Footer',
+		'category' => 'ua-blocks',
+		'icon' => 'table-row-before',
+		'description' => 'University Alpha Theme Block  for Header',
+		'keywords' => array(
+			'footer',
+			'menu',
+			'uabt',
+			'ua',
+			'events and blogs'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full',
+				'wide'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'GenericHeading' => array(
 		'apiVersion' => 3,
 		'name' => 'ua-blocks/generic-heading',
@@ -159,23 +224,204 @@ return array(
 	'Header' => array(
 		'apiVersion' => 3,
 		'name' => 'ua-blocks/header',
-		'title' => 'Header',
+		'title' => 'Ua Header',
 		'category' => 'ua-blocks',
 		'icon' => 'menu',
-		'description' => 'University Alpha Theme Blocks',
+		'description' => 'University Alpha Theme Block  for Header',
 		'keywords' => array(
 			'header',
 			'menu',
-			'uabt-menu',
+			'uabt',
+			'ua',
+			'events and blogs'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full',
+				'wide'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'Home' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/blog-home',
+		'title' => 'Blog Home',
+		'category' => 'ua-blocks',
+		'icon' => 'blog',
+		'description' => 'Reading->page->blog and home.html',
+		'keywords' => array(
+			'blog',
+			'home',
+			'uabt',
+			'ua',
+			'page'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'Page' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/page',
+		'title' => 'Single Page Template',
+		'category' => 'ua-blocks',
+		'icon' => 'text-page',
+		'description' => 'University Alpha Theme Blocks',
+		'keywords' => array(
+			'single',
+			'single-page',
+			'uabt',
+			'ua',
+			'page'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'SinglePost' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/single-post',
+		'title' => 'Single Post Template',
+		'category' => 'ua-blocks',
+		'icon' => 'media-document',
+		'description' => 'University Alpha Theme Blocks',
+		'keywords' => array(
+			'single',
+			'single-post',
+			'uabt',
 			'ua'
 		),
 		'version' => '1.0.0',
 		'textdomain' => 'uadomain',
 		'attributes' => array(
-			
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'SlideItem' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/slide-item',
+		'title' => 'Slide Item',
+		'category' => 'ua-blocks',
+		'parent' => array(
+			'ua-blocks/slide-show'
+		),
+		'icon' => 'welcome-add-page',
+		'description' => 'University Alpha Theme Blocks',
+		'keywords' => array(
+			'banner',
+			'ub-banner',
+			'uabt-blocks',
+			'ua'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'themeimage' => array(
+				'type' => 'string'
+			),
+			'align' => array(
+				'type' => 'string',
+				'default' => 'full'
+			),
+			'imgID' => array(
+				'type' => 'number'
+			),
+			'imgURL' => array(
+				'type' => 'string'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
+	'SlideShow' => array(
+		'apiVersion' => 3,
+		'name' => 'ua-blocks/slide-show',
+		'title' => 'Slide show',
+		'category' => 'ua-blocks',
+		'icon' => 'slides',
+		'description' => 'University Alpha Theme Block  for Header',
+		'keywords' => array(
+			'slide',
+			'slider',
+			'uabt',
+			'ua',
+			'slide show'
+		),
+		'version' => '1.0.0',
+		'textdomain' => 'uadomain',
+		'attributes' => array(
+			'align' => array(
+				'type' => 'string',
+				'default' => 'wide'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'full',
+				'wide'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	)

@@ -1,0 +1,24 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/events-and-blogs",
+  "title": "Events and Blogs",
+  "category": "ua-blocks",
+  "icon": "text",
+  "description": "University Alpha Theme Blocks",
+  "keywords": ["events", "blogs", "uabt", "ua", "events and blogs"],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full", "wide"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

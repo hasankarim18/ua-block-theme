@@ -1,1 +1,453 @@
-(()=>{"use strict";var e,l={60(){const e=window.wp.blocks,l=JSON.parse('{"apiVersion":3,"name":"ua-blocks/generic-heading","title":"GenericHeading","category":"ua-blocks","icon":"text","description":"University Alpha Theme Blocks","keywords":["heading","generic heading","uabt-menu","ua","ua heading"],"version":"1.0.0","textdomain":"uadomain","attributes":{"text":{"type":"string","default":"Heading text..."},"textAlign":{"type":"string","default":"center"},"color":{"type":"string","default":"#fff"},"fontSize":{"type":"string","default":"16px"},"fontWeight":{"type":"string","default":"700"}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}'),t=window.wp.blockEditor,r=window.wp.components,o=window.ReactJSXRuntime;(0,e.registerBlockType)(l,{edit:function({attributes:e,setAttributes:l}){const a=(0,t.useBlockProps)(),{textAlign:n,text:i,color:s,fontSize:c,fontWeight:d}=e;return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsxs)(t.BlockControls,{children:[(0,o.jsxs)(r.ToolbarGroup,{children:[(0,o.jsx)(r.ToolbarButton,{isPressed:"small"===c,onClick:()=>{l({fontSize:"small"})},children:"Small"}),(0,o.jsx)(r.ToolbarButton,{isPressed:"medium"===c,onClick:()=>{l({fontSize:"medium"})},children:"Medium"}),(0,o.jsx)(r.ToolbarButton,{isPressed:"large"===c,onClick:()=>{l({fontSize:"large"})},children:"Large"}),(0,o.jsx)(r.ToolbarButton,{isPressed:"extra-large"===c,onClick:()=>{l({fontSize:"extra-large"})},children:"Extra Large"}),(0,o.jsx)(r.ToolbarButton,{isPressed:"x-extra-large"===c,onClick:()=>{l({fontSize:"x-extra-large"})},children:"X Extra Large"})]}),(0,o.jsx)(t.AlignmentToolbar,{value:n,onChange:e=>{l({textAlign:e})}})]}),(0,o.jsx)(t.InspectorControls,{children:(0,o.jsxs)(r.PanelBody,{children:[(0,o.jsx)("p",{children:"Text Color"}),(0,o.jsx)(r.ColorPalette,{colors:[{name:"blue",color:"#0deb66"},{name:"orange",color:"#ee964b"},{name:"dark-orange",color:"#f95738"}],value:s,onChange:e=>{l({color:e})}}),(0,o.jsx)(r.SelectControl,{label:"Font Size",value:c,options:[{label:"Small",value:"small"},{label:"Medium",value:"medium"},{label:"Large",value:"large"},{label:"X Large",value:"extra-large"},{label:"XX Large",value:"x-extra-large"}],onChange:e=>{l({fontSize:e})}}),(0,o.jsx)("p",{children:"Font Weight"}),(0,o.jsx)(r.SelectControl,{value:d,options:[{label:"Regular",value:"400"},{label:"Bold",value:"700"},{label:"Extra Bold",value:"900"}],onChange:e=>{l({fontWeight:e})}})]})}),(0,o.jsx)("div",{...a,children:(0,o.jsx)(t.RichText,{tagName:"h1",value:i,onChange:e=>{l({text:e})},className:`uatb-generic-heading uatb-generic-heading-${c}`,style:{color:s,textAlign:n,fontWeight:d},allowedFormats:["core/bold","core/italic"],placeholder:"Heading text..."})})]})},save:()=>null})}},t={};function r(e){var o=t[e];if(void 0!==o)return o.exports;var a=t[e]={exports:{}};return l[e](a,a.exports,r),a.exports}r.m=l,e=[],r.O=(l,t,o,a)=>{if(!t){var n=1/0;for(d=0;d<e.length;d++){for(var[t,o,a]=e[d],i=!0,s=0;s<t.length;s++)(!1&a||n>=a)&&Object.keys(r.O).every(e=>r.O[e](t[s]))?t.splice(s--,1):(i=!1,a<n&&(n=a));if(i){e.splice(d--,1);var c=o();void 0!==c&&(l=c)}}return l}a=a||0;for(var d=e.length;d>0&&e[d-1][2]>a;d--)e[d]=e[d-1];e[d]=[t,o,a]},r.o=(e,l)=>Object.prototype.hasOwnProperty.call(e,l),(()=>{var e={525:0,873:0};r.O.j=l=>0===e[l];var l=(l,t)=>{var o,a,[n,i,s]=t,c=0;if(n.some(l=>0!==e[l])){for(o in i)r.o(i,o)&&(r.m[o]=i[o]);if(s)var d=s(r)}for(l&&l(t);c<n.length;c++)a=n[c],r.o(e,a)&&e[a]&&e[a][0](),e[a]=0;return r.O(d)},t=globalThis.webpackChunkua_block_theme=globalThis.webpackChunkua_block_theme||[];t.forEach(l.bind(null,0)),t.push=l.bind(null,t.push.bind(t))})();var o=r.O(void 0,[873],()=>r(60));o=r.O(o)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./blocks/src/GenericHeading/edit.js"
+/*!*******************************************!*\
+  !*** ./blocks/src/GenericHeading/edit.js ***!
+  \*******************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _edit_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit.scss */ "./blocks/src/GenericHeading/edit.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)();
+  const {
+    textAlign,
+    text,
+    color,
+    fontSize,
+    fontWeight
+  } = attributes;
+  const ourColors = [{
+    name: "blue",
+    color: "#0deb66"
+  }, {
+    name: "orange",
+    color: "#ee964b"
+  }, {
+    name: "dark-orange",
+    color: "#f95738"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.BlockControls, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+          isPressed: fontSize === "small",
+          onClick: () => {
+            setAttributes({
+              fontSize: "small"
+            });
+          },
+          children: "Small"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+          isPressed: fontSize === "medium",
+          onClick: () => {
+            setAttributes({
+              fontSize: "medium"
+            });
+          },
+          children: "Medium"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+          isPressed: fontSize === "large",
+          onClick: () => {
+            setAttributes({
+              fontSize: "large"
+            });
+          },
+          children: "Large"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+          isPressed: fontSize === "extra-large",
+          onClick: () => {
+            setAttributes({
+              fontSize: "extra-large"
+            });
+          },
+          children: "Extra Large"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+          isPressed: fontSize === "x-extra-large",
+          onClick: () => {
+            setAttributes({
+              fontSize: "x-extra-large"
+            });
+          },
+          children: "X Extra Large"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.AlignmentToolbar, {
+        value: textAlign,
+        onChange: value => {
+          setAttributes({
+            textAlign: value
+          });
+        }
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: "Text Color"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
+          colors: ourColors,
+          value: color,
+          onChange: newColor => {
+            setAttributes({
+              color: newColor
+            });
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+          label: "Font Size",
+          value: fontSize,
+          options: [{
+            label: "Small",
+            value: "small"
+          }, {
+            label: "Medium",
+            value: "medium"
+          }, {
+            label: "Large",
+            value: "large"
+          }, {
+            label: "X Large",
+            value: "extra-large"
+          }, {
+            label: "XX Large",
+            value: "x-extra-large"
+          }],
+          onChange: newValue => {
+            setAttributes({
+              fontSize: newValue
+            });
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: "Font Weight"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+          value: fontWeight,
+          options: [{
+            label: "Regular",
+            value: "400"
+          }, {
+            label: "Bold",
+            value: "700"
+          }, {
+            label: "Extra Bold",
+            value: "900"
+          }],
+          onChange: newValue => {
+            setAttributes({
+              fontWeight: newValue
+            });
+          }
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      ...blockProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+        tagName: "h1",
+        value: text,
+        onChange: value => {
+          setAttributes({
+            text: value
+          });
+        },
+        className: `uatb-generic-heading uatb-generic-heading-${fontSize}`,
+        style: {
+          color: color,
+          textAlign: textAlign,
+          fontWeight: fontWeight
+        },
+        allowedFormats: ["core/bold", "core/italic"],
+        placeholder: "Heading text..."
+      })
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./blocks/src/GenericHeading/index.js"
+/*!********************************************!*\
+  !*** ./blocks/src/GenericHeading/index.js ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./blocks/src/GenericHeading/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./blocks/src/GenericHeading/edit.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./blocks/src/GenericHeading/style.scss");
+
+
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__, {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: () => {
+    return null;
+  }
+});
+
+/***/ },
+
+/***/ "./blocks/src/GenericHeading/edit.scss"
+/*!*********************************************!*\
+  !*** ./blocks/src/GenericHeading/edit.scss ***!
+  \*********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/src/GenericHeading/style.scss"
+/*!**********************************************!*\
+  !*** ./blocks/src/GenericHeading/style.scss ***!
+  \**********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "react/jsx-runtime"
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+(module) {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ },
+
+/***/ "@wordpress/block-editor"
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+(module) {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ },
+
+/***/ "@wordpress/blocks"
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+(module) {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ },
+
+/***/ "@wordpress/components"
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ },
+
+/***/ "./blocks/src/GenericHeading/block.json"
+/*!**********************************************!*\
+  !*** ./blocks/src/GenericHeading/block.json ***!
+  \**********************************************/
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"ua-blocks/generic-heading","title":"GenericHeading","category":"ua-blocks","icon":"text","description":"University Alpha Theme Blocks","keywords":["heading","generic heading","uabt-menu","ua","ua heading"],"version":"1.0.0","textdomain":"uadomain","attributes":{"text":{"type":"string","default":"Heading text..."},"textAlign":{"type":"string","default":"center"},"color":{"type":"string","default":"#fff"},"fontSize":{"type":"string","default":"16px"},"fontWeight":{"type":"string","default":"700"}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"GenericHeading/index": 0,
+/******/ 			"GenericHeading/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkua_block_theme"] = globalThis["webpackChunkua_block_theme"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["GenericHeading/style-index"], () => (__webpack_require__("./blocks/src/GenericHeading/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

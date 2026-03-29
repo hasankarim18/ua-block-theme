@@ -68,6 +68,26 @@ function university_files()
 }
 
 add_action('wp_enqueue_scripts', 'university_files');
+function university_editor_files()
+{
+  wp_enqueue_script(
+    'src-university-index.js',
+    get_theme_file_uri('/src/localize.js'),
+    [],
+    '1.0',
+    true
+  );
+  wp_localize_script('wp-editor', 'ourThemeData', array('themePath' => get_stylesheet_directory_uri()));
+
+  wp_localize_script('src-university-index.js', 'localizeData', [
+    'root_url' => get_site_url(),
+    'nonce' => wp_create_nonce('wp_rest'),
+    'bannerBgFallback' => get_theme_file_uri('/images/library-hero.jpg'),
+    'themeimagepath' => get_theme_file_uri('/images/')
+  ]);
+}
+add_action('enqueue_block_editor_assets', 'university_editor_files');
+
 
 function university_features()
 {

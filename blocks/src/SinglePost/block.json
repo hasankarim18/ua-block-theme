@@ -1,0 +1,24 @@
+{
+  "apiVersion": 3,
+  "name": "ua-blocks/single-post",
+  "title": "Single Post Template",
+  "category": "ua-blocks",
+  "icon": "media-document",
+  "description": "University Alpha Theme Blocks",
+  "keywords": ["single", "single-post", "uabt", "ua"],
+  "version": "1.0.0",
+  "textdomain": "uadomain",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full"]
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
